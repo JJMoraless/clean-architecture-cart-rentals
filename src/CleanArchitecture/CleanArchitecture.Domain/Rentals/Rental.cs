@@ -1,4 +1,5 @@
 using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Shared;
 using CleanArchitecture.Domain.Vehicles;
 
 namespace CleanArchitecture.Domain.Rentals;
@@ -50,4 +51,11 @@ public class Rental : Entity
         DateCompleted = dateCompleted;
         DateCalled = dateCalled;
     }
+
+    public static Rental Reserve(
+        Vehicle vehicle,
+        Guid userId,
+        DateRange duration,
+        DateTime dateCreated
+    ) { }
 }
